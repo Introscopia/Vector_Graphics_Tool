@@ -17,6 +17,7 @@
 [I] to toggle integer mode
 [R] to toggle between round modes
 [ENTER] again to export .txt file
+[Ctrl+C] to copy code to clipboard
 
 [MOUSEWHEEL] zoom
 [RIGHT CLICK] pan

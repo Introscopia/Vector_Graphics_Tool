@@ -105,6 +105,12 @@ void keyPressed() {
       saving = true;
     }
   }
+  else if ( key == 0x03 ) {  // Ctrl+C
+    String[] out = output();
+    String concat = "";
+    for( int i = 0; i < out.length; ++i ) concat += out[i] + "\n";
+    writeTextToClipboard( concat );
+  }
   else if ( key == ESC ) {
     if ( saving ) {
       saving = false;
@@ -144,6 +150,7 @@ void keyPressed() {
     else if(roundTo == 10){
         roundTo = 1;
     }
+    integers = true;
     roundToText = 180;
   }
   else if( key == 's' ){

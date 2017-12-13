@@ -207,19 +207,8 @@ void draw() {
     //text("save as: "+saveTitle, 5, height-25);
     text("save?", 5, height-25);
     if( save ){
-      String[] output = new String[v.size()+2];
-      output[0] = "beginShape();";
-      for (int i = 0; i < v.size(); i++) {
-        if(integers){
-          output[i+1] = v.get(i).intCode();
-        }
-        else{
-          output[i+1] = v.get(i).Code();
-        }
-      }
-      output[int(v.size()+1)] = "endShape(CLOSE);";
       //saveTitle += ".txt";
-      saveStrings( year()+"-"+month()+"-"+day()+" "+hour()+"."+minute()+"."+second()+".txt", output);
+      saveStrings( year()+"-"+month()+"-"+day()+" "+hour()+"."+minute()+"."+second()+".txt", output() );
       save = false;
       saving = false;
       savedText = 180;
@@ -229,6 +218,21 @@ void draw() {
   else{
    noFill();
   }
+}
+
+String[] output(){
+  String[] o = new String[v.size()+2];
+  o[0] = "beginShape();";
+  for (int i = 0; i < v.size(); i++) {
+    if(integers){
+      o[i+1] = v.get(i).intCode();
+    }
+    else{
+      o[i+1] = v.get(i).Code();
+    }
+  }
+  o[int(v.size()+1)] = "endShape(CLOSE);";
+  return o;
 }
 
 void grid(){
