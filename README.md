@@ -1,12 +1,12 @@
 # Vector_Graphics_Tool
 
-[V] for vector()
+[V] for vertex()
 
-[C] for curveVector()
+[C] for curveVertex()
 
-[Q] for QuadradicVector()
+[Q] for QuadradicVertex()
 
-[B] for BezierVector()
+[B] for BezierVertex()
 
 
 [S] for vertical symmetry 
@@ -19,7 +19,7 @@
 
 [ESC] to enter adjust mode
 
-	(click and drag vertices and control points to adjust)
+(click and drag vertices and control points to adjust)
 
 
 [ENTER] to enter save mode
